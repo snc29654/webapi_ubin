@@ -6,21 +6,22 @@
     <link rel="stylesheet" href="sample.css" type="text/css">
 </head>
 <body>
-<b>URL スクレイピング</b>
+<b>WEB API 郵便番号</b>
 <br>
 <br>
   <table width=80%%>
     <tr>
       <td COLSPAN=2>
         <form method="post" target="_blank" action="http://localhost:6543">
-          <p>メモ帳への入力：
+          <p>郵便番号検索：
           <div>       <input type="hidden" type="text" name="date"> </div>
           <div>       <input type="hidden" type="text" name="name"></div>
           <div>       <input type="hidden" type="text" name="weather"></div>
           <div>   指定キー（このキーのみ表示） <input type="text" name="match_key"></div>
           <div>   検索ワード（内容から検索） <input type="text" name="match_word"></div>
           <div>   削除キー <input id="ex_box" input type="text" name="delkey" disabled /></div>
-          <div>   スクレいピングURL <input type="text" size="50" name="scraping_url" value=""></div>
+          <div>   <input type="hidden" size="50" name="scraping_url" value=""></div>
+          <div>   郵便番号 <input type="text" size="20" name="zip_code" value="2330008"></div>
             <br>
           </p>
             <select name="action" id="action">

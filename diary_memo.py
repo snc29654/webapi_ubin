@@ -17,10 +17,11 @@ import webbrowser
 
 dbname = '../database.db'
 
-
+zip_code=[]
 
 def  data_print(url):
-    params = {'zipcode':'2330008'}
+    global zip_code
+    params = {'zipcode':zip_code}
 
     res = requests.get(url, params=params)
 
@@ -31,6 +32,8 @@ def  data_print(url):
 
     
 def diary_world(request):
+    global zip_code
+
     print(request.params)
     in_data=request.params
     date=in_data["date"]
@@ -43,7 +46,7 @@ def diary_world(request):
         name="未入力"
 
 
-
+    zip_code=in_data["zip_code"]
     weather=in_data["weather"]
     if weather =="":
         weather="未入力"
