@@ -15,7 +15,7 @@ import pprint
 import webbrowser
 
 
-dbname = '../database.db'
+dbname = '../webapi_ubin.db'
 
 zip_code=[]
 
